@@ -31,7 +31,9 @@ function! accordion#Accordion(...)
     endif
     "jump to prevwin and back so that window history is preserved
     execute prevwin "wincmd w"
+    normal! 100zh
     execute curwin "wincmd w"
+    normal! 100zh
     let s:accordion_running = 0
   endif
 endfunction
